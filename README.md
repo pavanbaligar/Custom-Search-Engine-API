@@ -1,37 +1,11 @@
-# Custom Search API and Gemini API Integration
+# Custom Search Engine with Image Analysis
 
-This project integrates the **Google Custom Search API** to fetch both website and image search results, along with the **Gemini API** to generate text-based responses. The Google Custom Search API allows you to search for websites and images based on a given query, while the Gemini API provides responses to user queries in the form of generated text.
+## Overview
+This project develops a **Custom Search Engine** using the Google Custom Search that retrieves websites and images based on a user query. It further processes the images by extracting OCR, using a pretrained model for image detection, generating captions, and calculating similarity scores between the generated captions and responses from the Gemini API.
 
 ## Features
-
-- **Google Custom Search API**:
-  - Fetch websites based on user queries.
-  - Fetch images based on user queries.
-  
-- **Gemini API**:
-  - Generate text-based responses for queries.
-  
-## Setup and Installation
-
-### 1. Google Custom Search API
-
-To use the **Google Custom Search API** for website and image search, follow the steps below:
-
-#### a. Get an API Key
-1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a new project or use an existing one.
-3. Enable the **Custom Search API** for your project.
-4. Go to the **API & Services > Credentials** page and create an API key.
-
-#### b. Create a Programmable Search Engine
-1. Visit [Programmable Search Engine](https://programmablesearchengine.google.com/about/).
-2. Create a new search engine and note down the **Search Engine ID (CSE ID)**.
-3. Configure your search engine to search the web or images, as needed.
-
-### 2. Gemini API
-
-To use the **Gemini API**:
-
-1. Go to the [Gemini API documentation](https://cloud.google.com/ai/gemini) to get access and configure the API key.
-2. Obtain your **Gemini API key** to authenticate requests.
-
+- **Google Custom Search Integration**: Retrieves websites and images based on user input.
+- **Image Classification**: Classifies images using a pretrained ResNet model.
+- **Image Captioning**: Generates captions for images using the BLIP model.
+- **Similarity Scoring**: Compares the generated image captions with responses from the Gemini API using cosine similarity.
+- **Gemini API Integration**: Enhances the search and processing experience by generating context-based responses for user queries.
